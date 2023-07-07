@@ -1,11 +1,10 @@
-"use strict";
 /*
    New Perspectives on HTML5 and CSS3, 8th Edition
    Tutorial 7
-   Coding Challenge 3
+   Tutorial Case
 
 
-   Filename: formsubmit.js
+   Filename: rb_formsubmit.js
 
    Purpose: The purpose of this program is to simply report on a
             successful completition of a valid Web form.
@@ -23,9 +22,7 @@
 
 window.onload = function() {
    document.forms[0].onsubmit = function() {
-      if (this.checkValidity()) {
-         alert("Form Submitted");
-         return false;
-      }
+      if (this.checkValidity()) alert("No invalid data detected. Will retain data for further testing.");
+      return false;
    };
 };
